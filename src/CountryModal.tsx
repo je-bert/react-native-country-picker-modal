@@ -13,8 +13,10 @@ const styles = StyleSheet.create({
 
 export const CountryModal = ({
   children,
-  withModal,
-  disableNativeModal,
+  withModal = true,
+  disableNativeModal = false,
+  animationType = 'slide',
+  animated = true,
   ...props
 }: ModalProps & {
   children: React.ReactNode
@@ -43,11 +45,4 @@ export const CountryModal = ({
     return <Modal {...props}>{content}</Modal>
   }
   return content
-}
-
-CountryModal.defaultProps = {
-  animationType: 'slide',
-  animated: true,
-  withModal: true,
-  disableNativeModal: false,
 }
