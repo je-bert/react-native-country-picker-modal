@@ -18,7 +18,7 @@ babel.config.js
 metro.config.js
 scripts/
 src/
-data/
+/data/
 App.tsx
 tsconfig.json
 tslint.json
@@ -36,5 +36,3 @@ lib/assets/data/countries-image.json
 lib/assets/images/icon.png
 lib/assets/images/splash.png
 .expo-shared/assets.json
-
-!lib/data/countries-emoji.json  # Ensure this file is included
