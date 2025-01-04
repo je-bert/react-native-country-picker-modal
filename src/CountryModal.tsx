@@ -16,7 +16,6 @@ export const CountryModal = ({
   withModal = true,
   disableNativeModal = false,
   animationType = 'slide',
-  animated = true,
   ...props
 }: ModalProps & {
   children: React.ReactNode
@@ -37,7 +36,11 @@ export const CountryModal = ({
   }, [disableNativeModal])
   if (withModal) {
     if (Platform.OS === 'web') {
-      return <Modal {...props}>{content}</Modal>
+      return (
+        <Modal animationType={animationType} {...props}>
+          {content}
+        </Modal>
+      )
     }
     if (disableNativeModal) {
       return null
