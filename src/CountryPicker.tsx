@@ -120,7 +120,7 @@ export const CountryPicker = (props: CountryPickerProps) => {
     closeButtonStyle,
     closeButtonImageStyle,
     excludeCountries,
-    placeholder =  'Select Country',
+    placeholder = 'Select Country',
     preferredCountries,
   } = props
   const [state, setState] = useState<State>({
